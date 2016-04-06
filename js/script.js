@@ -77,7 +77,9 @@ $(document).ready(function() {
 		$("#tempScoreContainer").text(temporaryScore);
 		$("#lastRoll").text(lastRoll);
 		$("#yourTurn").text(yourTurn);
-
+		if (lastRoll === 1) {
+			$("#slider").toggleClass("col-sm-offset-8");
+		}
 	});
 
 	$("#pass").click(function() {
@@ -99,6 +101,7 @@ $(document).ready(function() {
 			alert("Player 2 Wins");
 		}
 		$("#tempScoreContainer").text(temporaryScore);
+		$("#slider").toggleClass("col-sm-offset-8");
 	});
 
 	// if permanent score reaches 100, that player wins.

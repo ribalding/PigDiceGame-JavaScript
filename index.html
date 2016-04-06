@@ -11,20 +11,19 @@
 <body>
 	<!-- dat body tho -->
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-				<h1>Pig Dice</h1>
-			</div>
-			<div class="game col-sm-4 col-sm-offset-4">
+
+		<h1>Pig Dice</h1>
+		<div class="gameType">
+			<button id="onePlayer" class="btn btn-primary" type="button">One Player</button>
+			<button id="twoPlayer" class="btn btn-danger" type="button">Two Players</button>
+		</div>
+		<div class="game page-header row">
+			<div id="slider" class="game col-sm-4">
 				<div id="buttons1" class="btn-group">
 					<button id="roll" type="button" class="btn btn-success" name="button">Roll Dice</button>
 					<button id="pass" type="button" class="btn btn-info" name="button">Pass Turn</button>
 				</div>
 			</div>
-		</div>
-		<div class="gameType">
-			<button id="onePlayer" class="btn btn-primary" type="button">One Player</button>
-			<button id="twoPlayer" class="btn btn-danger" type="button">Two Players</button>
 		</div>
 		<div class="game">
 			<div class="row">
@@ -32,9 +31,9 @@
 					<h4>Player 1: <span id="player1Total">0</span></h4>
 				</div>
 				<div class="col-sm-4">
-					<h4 class="shared">Current Run: <span id="tempScoreContainer">0</span></h4>
-					<h4 class="shared">Last Roll: <span id="lastRoll"></span></h4>
-					<h4 class="shared">It is <span id="yourTurn"></span>'s turn.</h4>
+					<h3 class="shared">Current Run: <span id="tempScoreContainer">0</span></h3>
+					<h3 class="shared">Last Roll: <span id="lastRoll"></span></h3>
+					<h3 class="shared">It is <span id="yourTurn"></span>'s turn.</h3>
 				</div>
 				<div class="col-sm-4">
 					<h4>Player 2: <span id="player2Total">0</span></h4>
