@@ -11,13 +11,22 @@
 <body>
 	<!-- dat body tho -->
 	<div class="container">
-
-		<h1>Pig Dice</h1>
+		<div class="jumbotron page-header">
+			<h1>Pig Dice</h1>
+	  </div>
 		<div class="gameType">
 			<button id="onePlayer" class="btn btn-primary" type="button">One Player</button>
 			<button id="twoPlayer" class="btn btn-danger" type="button">Two Players</button>
 		</div>
 		<div class="game page-header row">
+			<h3>Rules</h3>
+			<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "pass":</p>
+			<ul>
+				<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+				<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+				<li>If a player chooses to "pass", their turn total is added to their score, and it becomes the next player's turn.</li>
+			</ul>
+			<p>The first player to score 100 or more points wins.</p>
 			<div id="slider" class="game col-sm-4">
 				<div id="buttons1" class="btn-group">
 					<button id="roll" type="button" class="btn btn-success" name="button">Roll Dice</button>
