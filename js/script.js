@@ -96,16 +96,20 @@ $(document).ready(function() {
 		player2.passTurn();
 		$("#yourTurn").text(yourTurn);
 		if (player1.permanentScore >= 100){
-			alert("Player 1 Wins");
+			$(".winner").text("Player 1");
+			$("#youWin").slideToggle(1000);
 		}
 		if (player2.permanentScore >= 100){
-			alert("Player 2 Wins");
+			$(".winner").text("Player 2");
+			$("#youWin").slideToggle("slow");
 		}
 		$("#tempScoreContainer").text(temporaryScore);
 		$("#slider").toggleClass("col-sm-offset-8");
 	});
 
-	// if permanent score reaches 100, that player wins.
+	$("#rulesHeader").click(function() {
+		$("#rulesList").slideToggle();
+	});
 
 
 });

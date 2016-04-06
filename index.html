@@ -19,14 +19,16 @@
 			<button id="twoPlayer" class="btn btn-danger" type="button">Two Players</button>
 		</div>
 		<div class="game page-header row">
-			<h3>Rules</h3>
-			<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "pass":</p>
-			<ul>
-				<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-				<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-				<li>If a player chooses to "pass", their turn total is added to their score, and it becomes the next player's turn.</li>
-			</ul>
-			<p>The first player to score 100 or more points wins.</p>
+			<h3 id="rulesHeader">ClICK HERE to See the Rules</h3>
+			<div id="rulesList">
+				<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "pass":</p>
+				<ul>
+					<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+					<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+					<li>If a player chooses to "pass", their turn total is added to their score, and it becomes the next player's turn.</li>
+				</ul>
+				<p>The first player to score 100 or more points wins.</p>
+			</div>
 			<div id="slider" class="game col-sm-4">
 				<div id="buttons1" class="btn-group">
 					<button id="roll" type="button" class="btn btn-success" name="button">Roll Dice</button>
@@ -48,6 +50,8 @@
 					<h4>Player 2: <span id="player2Total">0</span></h4>
 				</div>
 			</div>
+			<div id="youWin">
+				<h1>Congratulations <span class="winner"></span>, You Win!</h1>
 		</div>
 	</div>
 </body>

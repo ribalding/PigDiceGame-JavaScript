@@ -10,3 +10,23 @@
 #slider {
   margin-top: 25px;
 }
+
+#youWin{
+  display: none;
+  text-align: center;
+  margin-top: 45px;
+  color: darkred;
+  border: 5px solid darkred;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+#rulesHeader {
+  cursor:pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+#rulesList {
+  display: none;
+}
