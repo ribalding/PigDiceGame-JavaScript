@@ -19,7 +19,6 @@ Player.prototype.announceTurn = function(){
 Player.prototype.passTurn = function(){
 	temporaryScore = 0;
 	if (this.turn === true) {
-		// this.announceTurn();
 		this.turn = false;
 	} else {
 		this.turn = true;
@@ -33,7 +32,7 @@ Player.prototype.dieRoll = function() {
 
 Player.prototype.fullRoll = function() {
 	var roll = this.dieRoll();
-	alert(roll);
+	// alert(roll);
 	if(roll !== 1){
 		temporaryScore += roll;
 	} else if (roll === 1){
