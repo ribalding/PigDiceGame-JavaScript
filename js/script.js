@@ -10,6 +10,7 @@ function Player(name, turnYN, humanYN){
 	this["turn"] = turnYN;
 	this["human"] = humanYN;
 }
+
 Player.prototype.announceTurn = function(){
 	if(this.turn === true){
 		yourTurn = this.name;
