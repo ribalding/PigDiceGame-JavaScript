@@ -23,7 +23,20 @@ Player.prototype.dieRoll = function() {
 	return (1 + Math.floor(Math.random() * 6));
 }
 
-//  Player.prototype.computerTurn = function(){
+Player.prototype.fullRoll = function() {
+	if(this.turn === true){
+		var roll = this.dieRoll();
+		alert(roll);
+		if(roll !== 1){
+			this.temporaryScore += roll;
+		} else if (roll === 1){
+			player1.passTurn();
+			player2.passTurn();
+		}
+	}
+}
+
+// Player.prototype.computerTurn = function(){
 // 	while(player2.turn === true){
 // 		var rollComp = player2.dieRoll();
 // 		if(rollComp !== 1){
@@ -86,29 +99,27 @@ $(document).ready(function() {
 
 
 	$("#roll").click(function() {
-		if(player1.turn === true){
-			var roll = player1.dieRoll();
-			alert(roll);
-			if(roll !== 1){
-				player1.temporaryScore += roll;
-			} else if (roll === 1){
-				player1.passTurn();
-				player2.passTurn();
-			} else{
-				alert("ERRR BRUH");
-			}
-		} else if (player2.turn === true){
-			var roll2 = player2.dieRoll();
-			alert(roll2);
-			if(roll2 !== 1){
-				player2.temporaryScore += roll2;
-			} else if (roll2 === 1){
-				player1.passTurn();
-				player2.passTurn();
-			}
-		} else {
-			alert("ERRR BRUH");
-		}
+		player1.fullRoll();
+		player2.fullRoll();
+		// if(player1.turn === true){
+		// 	var roll = player1.dieRoll();
+		// 	alert(roll);
+		// 	if(roll !== 1){
+		// 		player1.temporaryScore += roll;
+		// 	} else if (roll === 1){
+		// 		player1.passTurn();
+		// 		player2.passTurn();
+		// 	}
+		// } else if (player2.turn === true){
+		// 	var roll2 = player2.dieRoll();
+		// 	alert(roll2);
+		// 	if(roll2 !== 1){
+		// 		player2.temporaryScore += roll2;
+		// 	} else if (roll2 === 1){
+		// 		player1.passTurn();
+		// 		player2.passTurn();
+		// 	}
+		// }
 	});
 
 	$("#pass").click(function() {
