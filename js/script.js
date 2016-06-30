@@ -54,10 +54,6 @@ $(document).ready(function() {
 		player2 = new Player("Computer", false, false);
 	});
 
-	//if(player2.turn === true && player2.human === false){
-	//	player2.computerTurn();
-	//}
-
 	//TWO PLAYER GAME
 	$("#twoPlayer").click(function(){
 		$(".gameType").hide();
